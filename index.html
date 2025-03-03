@@ -4,20 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Enhanced styling with modern CSS framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Google Fonts - Add some premium fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+        
+        <!-- Box Icons -->
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website </title>
+        <title>Sachin Acharya | Creative Developer</title>
         <link rel="icon" href="./assets/img/perfil.jpg">
     </head>
     <body>
-        <!--===== HEADER =====-->
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- HEADER -->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Sachin</a>
+                    <a href="#" class="nav__logo">Sachin<span class="highlight">.</span></a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -25,7 +36,8 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -37,169 +49,700 @@
         </header>
 
         <main class="l-main">
-            <!--===== HOME =====-->
+            <!-- HOME -->
             <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Sachin</span><br></h1>
+                <div class="home__data" data-aos="fade-right" data-aos-delay="300">
+                    <h1 class="home__title">Hello World<span class="blink">_</span><br>I'm <span class="home__title-color">Sachin</span><br><span class="typed-text"></span></h1>
+                    <p class="home__description">Turning ideas into digital reality</p>
 
-                    <a href="#" class="button">Contact</a>
+                    <div class="home__buttons">
+                        <a href="#contact" class="button button-primary">Let's Talk</a>
+                        <a href="#work" class="button button-outline">View My Work</a>
+                    </div>
                 </div>
 
-                <div class="home__social">
+                <div class="home__social" data-aos="fade-up" data-aos-delay="600">
                     <a href="https://www.linkedin.com/in/sachin-acharya-5107ab198/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/elpisofthelake" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://github.com/elpisofthelake" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.facebook.com/sachin.acharya.397948" class="home__social-icon" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/sachiin_acharya/" class="home__social-icon" target="_blank"><i class='bx bxl-instagram'></i></a>
                 </div>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.jpg"/>
-                        </g>
-                    </svg>
+                <div class="home__img" data-aos="fade-left" data-aos-delay="450">
+                    <div class="home__blob-container">
+                        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#6a11cb" />
+                                    <stop offset="100%" stop-color="#2575fc" />
+                                </linearGradient>
+                            </defs>
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path fill="url(#gradient)" d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.jpg"/>
+                            </g>
+                        </svg>
+                        <div class="home__blob-animation"></div>
+                    </div>
+                </div>
+                
+                <div class="scroll-down">
+                    <a href="#about"><i class="fas fa-chevron-down"></i></a>
                 </div>
             </section>
 
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+            <!-- ABOUT -->
+            <section class="about section" id="about">
+                <h2 class="section-title" data-aos="fade-down">About Me</h2>
+                <span class="section-subtitle" data-aos="fade-up">My introduction</span>
 
                 <div class="about__container bd-grid">
-                    <div class="about__img">
+                    <div class="about__img" data-aos="fade-right" data-aos-delay="200">
                         <img src="assets/img/about.png" alt="">
+                        <div class="about__img-overlay"></div>
                     </div>
                     
-                    <div>
+                    <div class="about__content" data-aos="fade-left" data-aos-delay="300">
                         <h2 class="about__subtitle">I am Sachin</h2>
-                        <p class="about__text">I would love to change the world, but they won't give me the source code. :(</p>           
+                        <p class="about__text">I would love to change the world, but they won't give me the source code. :( </p>
+                        <p class="about__text">Creative developer with a passion for building beautiful, functional websites and applications. With expertise in both front-end and back-end technologies, I transform ideas into digital experiences that leave a lasting impression.</p>
+                        
+                        <div class="about__info">
+                            <div class="about__info-box">
+                                <h3 class="about__info-title">02+</h3>
+                                <span class="about__info-name">Years<br>experience</span>
+                            </div>
+                            <div class="about__info-box">
+                                <h3 class="about__info-title">15+</h3>
+                                <span class="about__info-name">Completed<br>projects</span>
+                            </div>
+                            <div class="about__info-box">
+                                <h3 class="about__info-title">05+</h3>
+                                <span class="about__info-name">Happy<br>clients</span>
+                            </div>
+                        </div>
+                        
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/CV.pdf" class="button button-primary">Download CV <i class='bx bxs-download'></i></a>
+                        </div>
                     </div>                                   
                 </div>
             </section>
 
-            <!--===== SKILLS =====-->
+            <!-- SKILLS -->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" data-aos="fade-down">Skills</h2>
+                <span class="section-subtitle" data-aos="fade-up">My technical level</span>
 
                 <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Currently, I know a couple of skills such as HTML, CSS, JS and many more.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
+                    <div class="skills__content" data-aos="fade-right" data-aos-delay="200">
+                        <div class="skills__header">
+                            <i class='bx bx-code-alt skills__icon'></i>
                             <div>
-                                <span class="skills__percentage">95%</span>
+                                <h3 class="skills__title">Frontend Development</h3>
+                                <span class="skills__subtitle">More than 2 years</span>
                             </div>
+                            <i class='bx bx-chevron-down skills__arrow'></i>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
+                        
+                        <div class="skills__list">
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-html5 skills__icon'></i>
+                                    <span class="skills__name">HTML5</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__html"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">95%</span>
+                                </div>
                             </div>
-                            <div class="skills__bar skills__css">
-                                
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-css3 skills__icon'></i>
+                                    <span class="skills__name">CSS3</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__css"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">85%</span>
+                                </div>
                             </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-javascript skills__icon'></i>
+                                    <span class="skills__name">JAVASCRIPT</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__js"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">65%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">Python</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-react skills__icon'></i>
+                                    <span class="skills__name">React</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__react"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">60%</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    <div class="skills__content" data-aos="fade-left" data-aos-delay="300">
+                        <div class="skills__header">
+                            <i class='bx bx-server skills__icon'></i>
+                            <div>
+                                <h3 class="skills__title">Backend Development</h3>
+                                <span class="skills__subtitle">More than 1 year</span>
+                            </div>
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+                        
+                        <div class="skills__list">
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-python skills__icon'></i>
+                                    <span class="skills__name">Python</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__python"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxs-data skills__icon'></i>
+                                    <span class="skills__name">SQL</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__sql"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__names">
+                                    <i class='bx bxl-nodejs skills__icon'></i>
+                                    <span class="skills__name">Node.js</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__node"></span>
+                                </div>
+                                <div>
+                                    <span class="skills__number">50%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+            <!-- SERVICES -->
+            <section class="services section" id="services">
+                <h2 class="section-title" data-aos="fade-down">Services</h2>
+                <span class="section-subtitle" data-aos="fade-up">What I offer</span>
 
-                <div class="work__container bd-grid">
-                    <a href="https://github.com/elpisofthelake/QuotesWithKivy" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="https://github.com/elpisofthelake/ReactPortfolio" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="SachiinAcharya.pythonanywhere.com" class="work__img">
-                        <img src="assets/img/work5.png" alt="">
-                    </a>
-                    <!-- <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt=""> -->
-                    </a>
+                <div class="services__container bd-grid">
+                    <div class="services__card" data-aos="zoom-in" data-aos-delay="100">
+                        <i class='bx bx-code-block services__icon'></i>
+                        <h3 class="services__title">Web Development</h3>
+                        <p class="services__description">Creating responsive and dynamic websites tailored to your needs, with modern technologies and best practices.</p>
+                    </div>
+
+                    <div class="services__card" data-aos="zoom-in" data-aos-delay="200">
+                        <i class='bx bx-mobile-alt services__icon'></i>
+                        <h3 class="services__title">Responsive Design</h3>
+                        <p class="services__description">Ensuring your website looks and works perfectly on all devices, from desktops to smartphones.</p>
+                    </div>
+
+                    <div class="services__card" data-aos="zoom-in" data-aos-delay="300">
+                        <i class='bx bx-data services__icon'></i>
+                        <h3 class="services__title">Database Management</h3>
+                        <p class="services__description">Designing and implementing efficient database solutions to store and manage your application data.</p>
+                    </div>
+
+                    <div class="services__card" data-aos="zoom-in" data-aos-delay="400">
+                        <i class='bx bx-paint services__icon'></i>
+                        <h3 class="services__title">UI/UX Design</h3>
+                        <p class="services__description">Creating beautiful and intuitive user interfaces that provide excellent user experience.</p>
+                    </div>
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
+            <!-- QUALIFICATION -->
+            <section class="qualification section">
+                <h2 class="section-title" data-aos="fade-down">Qualification</h2>
+                <span class="section-subtitle" data-aos="fade-up">My personal journey</span>
+
+                <div class="qualification__container bd-grid">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button-flex qualification__active" data-target="#education">
+                            <i class='bx bxs-graduation qualification__icon'></i>
+                            Education
+                        </div>
+
+                        <div class="qualification__button button-flex" data-target="#work">
+                            <i class='bx bxs-briefcase-alt-2 qualification__icon'></i>
+                            Work
+                        </div>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!-- EDUCATION -->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!-- QUALIFICATION 1 -->
+                            <div class="qualification__data" data-aos="fade-right">
+                                <div>
+                                    <h3 class="qualification__title">Computer Science</h3>
+                                    <span class="qualification__subtitle">University Name</span>
+                                    <div class="qualification__calendar">
+                                        <i class='bx bxs-calendar'></i>
+                                        2020 - 2024
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 2 -->
+                            <div class="qualification__data" data-aos="fade-left">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Web Development</h3>
+                                    <span class="qualification__subtitle">Online Certification</span>
+                                    <div class="qualification__calendar">
+                                        <i class='bx bxs-calendar'></i>
+                                        2022 - 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WORK -->
+                        <div class="qualification__content" data-content id="work">
+                            <!-- QUALIFICATION 1 -->
+                            <div class="qualification__data" data-aos="fade-right">
+                                <div>
+                                    <h3 class="qualification__title">Freelance Developer</h3>
+                                    <span class="qualification__subtitle">Remote</span>
+                                    <div class="qualification__calendar">
+                                        <i class='bx bxs-calendar'></i>
+                                        2022 - Present
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!-- QUALIFICATION 2 -->
+                            <div class="qualification__data" data-aos="fade-left">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Web Developer Intern</h3>
+                                    <span class="qualification__subtitle">Company Name</span>
+                                    <div class="qualification__calendar">
+                                        <i class='bx bxs-calendar'></i>
+                                        2021 - 2022
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO -->
+            <section class="work section" id="work">
+                <h2 class="section-title" data-aos="fade-down">Portfolio</h2>
+                <span class="section-subtitle" data-aos="fade-up">My recent work</span>
+
+                <div class="work__filters">
+                    <span class="work__filter active-filter" data-filter="all">All</span>
+                    <span class="work__filter" data-filter=".web">Web</span>
+                    <span class="work__filter" data-filter=".app">App</span>
+                    <span class="work__filter" data-filter=".design">Design</span>
+                </div>
+
+                <div class="work__container bd-grid">
+                    <div class="work__card mix web" data-aos="flip-left" data-aos-delay="100">
+                        <img src="assets/img/work1.jpg" alt="" class="work__img">
+                        <div class="work__data">
+                            <h3 class="work__title">Quotes App</h3>
+                            <p class="work__description">Mobile application for inspirational quotes</p>
+                            <a href="https://github.com/elpisofthelake/QuotesWithKivy" class="work__button">
+                                View Project <i class='bx bx-right-arrow-alt work__icon'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="work__card mix web" data-aos="flip-left" data-aos-delay="200">
+                        <img src="assets/img/work3.jpg" alt="" class="work__img">
+                        <div class="work__data">
+                            <h3 class="work__title">React Portfolio</h3>
+                            <p class="work__description">Modern portfolio built with React</p>
+                            <a href="https://github.com/elpisofthelake/ReactPortfolio" class="work__button">
+                                View Project <i class='bx bx-right-arrow-alt work__icon'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="work__card mix design" data-aos="flip-left" data-aos-delay="300">
+                        <img src="assets/img/work5.png" alt="" class="work__img">
+                        <div class="work__data">
+                            <h3 class="work__title">Python Web App</h3>
+                            <p class="work__description">Web application built with Python</p>
+                            <a href="SachiinAcharya.pythonanywhere.com" class="work__button">
+                                View Project <i class='bx bx-right-arrow-alt work__icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIAL -->
+            <section class="testimonial section">
+                <h2 class="section-title" data-aos="fade-down">Testimonial</h2>
+                <span class="section-subtitle" data-aos="fade-up">My clients say</span>
+
+                <div class="testimonial__container swiper-container" data-aos="fade-up">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left'></i>
+                            </div>
+                            <p class="testimonial__description">
+                                "Working with Sachin was a pleasure. His attention to detail and creative solutions exceeded our expectations."
+                            </p>
+                            <div class="testimonial__profile">
+                                <img src="assets/img/testimonial1.jpg" alt="" class="testimonial__img">
+                                <div class="testimonial__data">
+                                    <h3 class="testimonial__name">John Doe</h3>
+                                    <span class="testimonial__client">Client</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <div class="testimonial__quote">
+                                <i class='bx bxs-quote-alt-left'></i>
+                            </div>
+                            <p class="testimonial__description">
+                                "Sachin delivered our project on time and with outstanding quality. Highly recommended for web development projects."
+                            </p>
+                            <div class="testimonial__profile">
+                                <img src="assets/img/testimonial2.jpg" alt="" class="testimonial__img">
+                                <div class="testimonial__data">
+                                    <h3 class="testimonial__name">Jane Smith</h3>
+                                    <span class="testimonial__client">Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title" data-aos="fade-down">Contact Me</h2>
+                <span class="section-subtitle" data-aos="fade-up">Get in touch</span>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Submit" class="contact__button button">
+                    <div class="contact__info" data-aos="fade-right" data-aos-delay="200">
+                        <div class="contact__card">
+                            <i class='bx bxs-envelope contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">youremail@domain.com</span>
+                            <a href="mailto:youremail@domain.com" class="contact__button">
+                                Contact me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">WhatsApp</h3>
+                            <span class="contact__card-data">+1234567890</span>
+                            <a href="https://api.whatsapp.com/send?phone=1234567890&text=Hello" class="contact__button">
+                                Contact me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-linkedin contact__card-icon'></i>
+                            <h3 class="contact__card-title">LinkedIn</h3>
+                            <span class="contact__card-data">Sachin Acharya</span>
+                            <a href="https://www.linkedin.com/in/sachin-acharya-5107ab198/" class="contact__button">
+                                Contact me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form" data-aos="fade-left" data-aos-delay="300">
+                        <div class="contact__form-div">
+                            <label for="name" class="contact__form-tag">Name</label>
+                            <input type="text" id="name" placeholder="Your name" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="email" class="contact__form-tag">Email</label>
+                            <input type="email" id="email" placeholder="Your email" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="message" class="contact__form-tag">Message</label>
+                            <textarea id="message" cols="30" rows="10" placeholder="Your message" class="contact__form-input"></textarea>
+                        </div>
+
+                        <button class="button button-primary">Send Message <i class='bx bx-send'></i></button>
                     </form>
                 </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
+        <!-- FOOTER -->
         <footer class="footer">
-            <p class="footer__title">Sachin</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/sachin.acharya.397948" class="footer__icon" target="_blank"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/sachiin_acharya/" class="footer__icon" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                <!-- <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a> -->
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Sachin<span class="highlight">.</span></h3>
+                    <p class="footer__description">I'm Sachin, a creative developer passionate about building stunning websites and applications that solve real problems.</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#services" class="footer__link">Web Development</a></li>
+                        <li><a href="#services" class="footer__link">Responsive Design</a></li>
+                        <li><a href="#services" class="footer__link">Database Management</a></li>
+                        <li><a href="#services" class="footer__link">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Company</h3>
+                    <ul>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#work" class="footer__link">Portfolio</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/sachin.acharya.397948" class="footer__social-link" target="_blank"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/sachiin_acharya/" class="footer__social-link" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.linkedin.com/in/sachin-acharya-5107ab198/" class="footer__social-link" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/elpisofthelake" class="footer__social-link" target="_blank"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
             </div>
-            <p class="footer__copy">&#169; Acharya. All rigths reserved</p>
+
+            <p class="footer__copy">&#169; 2025 Sachin Acharya. All rights reserved.</p>
         </footer>
 
+        <!-- SCROLL TO TOP -->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
+        <!-- SCROLL REVEAL -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+        
+        <!-- SWIPER JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+        
+        <!-- AOS ANIMATION -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        
+        <!-- TYPED.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        
+        <!-- MAIN JS -->
         <script src="assets/js/main.js"></script>
+        
+        <!-- SCRIPT FOR ENHANCED FUNCTIONALITY -->
+        <script>
+            // Wait for DOM to load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize AOS Animation
+                AOS.init({
+                    duration: 1000,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
+                
+                // Initialize Typed.js
+                var typed = new Typed('.typed-text', {
+                    strings: ['Web Developer', 'Frontend Designer', 'Python Programmer', 'Creative Coder'],
+                    typeSpeed: 80,
+                    backSpeed: 40,
+                    backDelay: 1500,
+                    loop: true
+                });
+                
+                // Initialize Swiper for testimonials
+                var swiper = new Swiper('.swiper-container', {
+                    cssMode: true,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+                
+                // Preloader
+                window.addEventListener('load', function() {
+                    const preloader = document.querySelector('.preloader');
+                    preloader.classList.add('preloader-hidden');
+                    
+                    setTimeout(function() {
+                        preloader.style.display = 'none';
+                    }, 1000);
+                });
+                
+                // Work/Portfolio Filtering
+                const filterContainer = document.querySelector('.work__filters');
+                const galleryItems = document.querySelectorAll('.work__card');
+                
+                filterContainer.addEventListener('click', (e) => {
+                    if(e.target.classList.contains('work__filter')) {
+                        // Remove active class from current filter
+                        filterContainer.querySelector('.active-filter').classList.remove('active-filter');
+                        // Add active class to clicked filter
+                        e.target.classList.add('active-filter');
+                        
+                        const filterValue = e.target.getAttribute('data-filter');
+                        
+                        galleryItems.forEach((item) => {
+                            if(filterValue === 'all' || item.classList.contains(filterValue.substring(1))) {
+                                item.style.display = "block";
+                                
+                                // Add animation again
+                                item.classList.add('animate__animated', 'animate__fadeIn');
+                                setTimeout(() => {
+                                    item.classList.remove('animate__animated', 'animate__fadeIn');
+                                }, 500);
+                            } else {
+                                item.style.display = "none";
+                            }
+                        });
+                    }
+                });
+                
+                // Skills accordion
+                const skillsHeaders = document.querySelectorAll('.skills__header');
+                
+                skillsHeaders.forEach((header) => {
+                    header.addEventListener('click', () => {
+                        const parent = header.parentNode;
+                        
+                        if(parent.classList.contains('skills__open')) {
+                            parent.classList.remove('skills__open');
+                        } else {
+                            // Close all other open skills first
+                            document.querySelectorAll('.skills__content').forEach((content) => {
+                                content.classList.remove('skills__open');
+                            });
+                            
+                            parent.classList.add('skills__open');
+                        }
+                    });
+                });
+                
+                // Qualification tabs
+                const tabs = document.querySelectorAll('[data-target]');
+                const tabContents = document.querySelectorAll('[data-content]');
+                
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const target = document.querySelector(tab.dataset.target);
+                        
+                        tabContents.forEach(tabContent => {
+                            tabContent.classList.remove('qualification__active');
+                        });
+                        
+                        target.classList.add('qualification__active');
+                        
+                        tabs.forEach(t => {
+                            t.classList.remove('qualification__active');
+                        });
+                        
+                        tab.classList.add('qualification__active');
+                    });
+                });
+                
+                // Scroll sections active link
+                const sections = document.querySelectorAll('section[id]');
+                
+                function scrollActive() {
+                    const scrollY = window.pageYOffset;
+                    
+                    sections.forEach(current => {
+                        const sectionHeight = current.offsetHeight;
+                        const sectionTop = current.offsetTop - 50;
+                        const sectionId = current.getAttribute('id');
+                        
+                        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+                        } else {
+                            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+                        }
+                    });
+                }
+                
+                window.addEventListener('scroll', scrollActive);
+                
+                // Show scroll top button
+                function scrollTop() {
+                    const scrollTop = document.getElementById('scroll-top');
+                    
+                    if(this.scrollY >= 560) {
+                        scrollTop.classList.add('show-scroll');
+                    } else {
+                        scrollTop.classList.remove('show-scroll');
+                    }
+                }
+                
+                window.addEventListener('scroll', scrollTop);
+            });
+        </script>
     </body>
 </html>
