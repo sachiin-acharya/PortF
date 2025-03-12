@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Acharya - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
@@ -28,5 +29,56 @@
     <footer>
         <p>&copy; 2025 Sachin Acharya. All rights reserved.</p>
     </footer>
+
+    <div class="theme-toggle" id="themeToggle">🌓</div>
+
+<script>
+  // Simple theme toggle functionality
+  const themeToggle = document.getElementById('themeToggle');
+  
+  themeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+  });
+  
+  // Scroll animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollElements = document.querySelectorAll('.scroll-fade-in');
+    
+    const elementInView = (el, scrollOffset = 100) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (elementTop <= window.innerHeight - scrollOffset);
+    };
+    
+    const displayScrollElement = (element) => {
+      element.classList.add('visible');
+    };
+    
+    const hideScrollElement = (element) => {
+      element.classList.remove('visible');
+    };
+    
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 100)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      });
+    };
+    
+    // Add .scroll-fade-in class to sections you want to animate
+    document.querySelectorAll('section > div').forEach(item => {
+      item.classList.add('scroll-fade-in');
+    });
+    
+    window.addEventListener('scroll', () => {
+      handleScrollAnimation();
+    });
+    
+    // Initial check
+    handleScrollAnimation();
+  });
+</script>
 </body>
 </html>
