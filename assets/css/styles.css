@@ -1076,6 +1076,15 @@ img {
   padding: 2rem 0;
 }
 
+[data-theme="dark"] .footer {
+    background-color: var(--container-color);
+  }
+  
+  [data-theme="dark"] .footer__copy {
+    color: var(--text-color);
+  }
+  
+
 /*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
